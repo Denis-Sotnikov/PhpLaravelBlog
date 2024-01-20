@@ -25,6 +25,7 @@ class IndexController extends BaseController
         //if(isset($data))
         //$posts = Post::where('is_published', 1)->where('category_id', 5)->get();
         //$posts = Post::paginate(10);
+
 //        return view('post.index', compact('posts'));
 
         return PostResource::collection($posts);
