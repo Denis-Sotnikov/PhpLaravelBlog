@@ -20,6 +20,8 @@ class IndexController extends BaseController
 
         echo "i do it";
 
+dd(1111);
+        echo "hello";
         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
         $posts = Post::filter($filter)->paginate(10);
         //$query = Post::query();
