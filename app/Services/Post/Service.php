@@ -18,6 +18,7 @@ class Service
 //            ]);
 //            }0
         $post->tags()->attach($tags);
+        return $post;
     }
 
     public function update($data, $post)
@@ -26,5 +27,6 @@ class Service
         unset($data['tags']);
         $post->update($data);
         $post->tags()->sync($tags);
+        return $post->fresh();
     }
 }
